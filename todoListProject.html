@@ -12,41 +12,49 @@
 
 <body>
 
-    <button type="button" class="btn btn-info text-light" data-bs-toggle="modal" data-bs-target="#todo">
-        todo List Project
-    </button>
-    <div class="modal fade" id="todo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="todoLabel">todo Project</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-                        <div class="row">
-                            <form class="form-inline col-sm-offset-3">
-                                <div class="input-group">
-                                    <span class="input-group-addon">
-                                        <i class="glyphicon glyphicon-pencil"></i>
-                                    </span>
-                                    <input type="text" class="form-control" placeholder="todo-item" id="box"
-                                        style="width: 30vw" />
+    <div class="container">
+        <div class="row">
+            <div class="col-4 ">
+                <button type="button" class="btn btn-info text-light" data-bs-toggle="modal" data-bs-target="#todo">
+                    todo List Project
+                </button>
+                <div class="modal fade" id="todo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="todoLabel">todo Project</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <form class="form-inline col-sm-offset-3">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-pencil"></i>
+                                                </span>
+                                                <input type="text" class="form-control" placeholder="todo-item" id="box"
+                                                    style="width: 30vw" />
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="button" class="btn btn-info text-light form-control"
+                                                    value="add" style="width: 10vw" onclick="add_item()" />
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="row">
+                                        <ul id="list_item">
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <input type="button" class="btn btn-info text-light form-control" value="add"
-                                        style="width: 10vw" onclick="add_item()" />
-                                </div>
-                            </form>
-                        </div>
-                        <div class="row">
-                            <ul id="list_item">
-                            </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-info text-light"
+                                    data-bs-dismiss="modal">Close</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-info text-light" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
