@@ -15,30 +15,35 @@
     <div class="container">
         <div class="row">
             <div class="col-4 ">
+
                 <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row g-0">
+                    <div id="buyutec" class="row g-0">
                         <div class="col-md-4 text-center py-3">
-                            <img src="images/onay.png" class="img-fluid rounded-start" alt="...">
+                            <img src="images/onay.png" class="img-fluid rounded-circle" alt="onay">
+                            <img src="images/sil.png" class="img-fluid rounded-circle" alt="sil">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h5 class="card-title">todo List Project</h5>
-                                <p class="card-text">This is a todo List that made with javascript.</p>
+                                <h5 class="card-title">Yapılacaklar Listesi Projesi</h5>
+                                <p class="card-text">Javascript ile yapılmıştır.</p>
                                 <button type="button" class="btn btn-info text-light" data-bs-toggle="modal"
                                     data-bs-target="#todo">
-                                    todo List Project
+                                    Projeyi Aç
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>
 
+
                 <div class="modal fade" id="todo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-xl">
-                        <div class="modal-content">
+                        <div class="modal-content col-12">
                             <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="todoLabel">todo List Project</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                <div class="row">
+                                    <h1 class="otto modal-title fs-5" id="todoLabel">Yapılacaklar Listesi</h1>
+                                </div>
+                                <button type="button" class="btn-close" onclick="hideAlert()" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
@@ -49,12 +54,13 @@
                                                 <span class="input-group-addon">
                                                     <i class="glyphicon glyphicon-pencil"></i>
                                                 </span>
-                                                <input type="text" class="form-control" placeholder="todo-item" id="box"
+                                                <input type="text" class="form-control"
+                                                    placeholder="Listeye eklemek için yazın..." id="box"
                                                     style="width: 30vw" />
                                             </div>
                                             <div class="form-group">
-                                                <input type="button" class="btn btn-success text-light" value="add"
-                                                    style="width: 10vw" onclick="add_item()" />
+                                                <input type="button" class="btn btn-success text-light" value="Ekle"
+                                                    style="width: 10vw" onclick="addItem();" />
                                             </div>
                                         </form>
                                     </div>
@@ -64,20 +70,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-danger text-light"
-                                    data-bs-dismiss="modal">Close</button>
-                                <div id="alertMes">
-                                    <div class="alert alert-danger align-items-center" role="alert">
-                                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img"
-                                            aria-label="Danger:">
-                                            <use xlink:href="#exclamation-triangle-fill" />
-                                        </svg>
-                                        <div>
-                                            An example danger alert with an icon
-                                        </div>
-                                    </div>
+                            <div class="modal-footer d-flex justify-content-between align-items-center">
+                                <div id="alertMes" class="">
                                 </div>
+                                <button type="button" class="btn btn-danger text-light" onclick="hideAlert()"
+                                    data-bs-dismiss="modal">Kapat
+                                </button>
+
                             </div>
                         </div>
                     </div>
@@ -85,11 +84,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-
 
     <script src="js/main.js"></script>
 </body>
