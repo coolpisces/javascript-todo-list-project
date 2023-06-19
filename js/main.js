@@ -24,13 +24,11 @@ function add_item() {
     }
     else {
 
-        var alertList = document.querySelectorAll('.alert')
-        alertList.forEach(function (alert) {
-            new bootstrap.Alert(alert)
-        })
+        let alertMes = document.getElementsByClassName("alert");
+        alertMes.style.cssText = 'display:inline !important;';
 
         // Alert msg when value of box is "" empty.
-        alert("Geçerli bir giriş yapınız!");
+        //alert("Geçerli bir giriş yapınız!");
     }
 
 }
