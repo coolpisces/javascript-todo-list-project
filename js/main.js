@@ -7,7 +7,7 @@ function add_item() {
     if (item.value != "") {
 
         // Creating element and adding value to it
-        let make_li = document.createElement("LI");
+        let make_li = document.createElement("li");
         make_li.appendChild(document.createTextNode(item.value));
 
         // Adding li to ul
@@ -24,8 +24,13 @@ function add_item() {
     }
     else {
 
+        var alertList = document.querySelectorAll('.alert')
+        alertList.forEach(function (alert) {
+            new bootstrap.Alert(alert)
+        })
+
         // Alert msg when value of box is "" empty.
-        alert("plz add a value to item");
+        alert("Geçerli bir giriş yapınız!");
     }
 
 }

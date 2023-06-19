@@ -15,14 +15,29 @@
     <div class="container">
         <div class="row">
             <div class="col-4 ">
-                <button type="button" class="btn btn-info text-light" data-bs-toggle="modal" data-bs-target="#todo">
-                    todo List Project
-                </button>
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4 text-center py-3">
+                            <img src="images/onay.png" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">todo List Project</h5>
+                                <p class="card-text">This is a todo List that made with javascript.</p>
+                                <button type="button" class="btn btn-info text-light" data-bs-toggle="modal"
+                                    data-bs-target="#todo">
+                                    todo List Project
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="modal fade" id="todo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-xl">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="todoLabel">todo Project</h1>
+                                <h1 class="modal-title fs-5" id="todoLabel">todo List Project</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
@@ -38,8 +53,8 @@
                                                     style="width: 30vw" />
                                             </div>
                                             <div class="form-group">
-                                                <input type="button" class="btn btn-info text-light form-control"
-                                                    value="add" style="width: 10vw" onclick="add_item()" />
+                                                <input type="button" class="btn btn-success text-light" value="add"
+                                                    style="width: 10vw" onclick="add_item()" />
                                             </div>
                                         </form>
                                     </div>
@@ -50,8 +65,17 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-info text-light"
+                                <button type="button" class="btn btn-danger text-light"
                                     data-bs-dismiss="modal">Close</button>
+                                <div class="alert alert-danger d-flex align-items-center" role="alert">
+                                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img"
+                                        aria-label="Danger:">
+                                        <use xlink:href="#exclamation-triangle-fill" />
+                                    </svg>
+                                    <div>
+                                        An example danger alert with an icon
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
