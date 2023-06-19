@@ -23,10 +23,7 @@ function add_item() {
 
     }
     else {
-
-        let alertMes = document.getElementsByClassName("alert");
-        alertMes.style.cssText = 'display:inline !important;';
-
+        document.getElementsById("alert").style.display = "flex";
         // Alert msg when value of box is "" empty.
         //alert("Geçerli bir giriş yapınız!");
     }
