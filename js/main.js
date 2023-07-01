@@ -1,34 +1,23 @@
 function addItem() {
-    let item = document.getElementById("box");
-    let list_item = document.getElementById("list_item");
-    let alertMes = document.getElementById("alertMes");
-    if (item.value != "") {
+    const inputText = document.getElementById("box");
+    const ul = document.querySelector("ul");
+    const alertMes = document.getElementById("alertMes");
+    if (inputText.value != "") {
         hideAlert();
-        let liOlustur = document.createElement("li");
-        liOlustur.appendChild(document.createTextNode(item.value));
-        list_item.appendChild(liOlustur);
-        item.value = ""
-        liOlustur.onmousedown = function () {
-            this.parentNode.removeChild(this);
-        }
+        const li = document.createElement("li");
+        li.textContent = inputText.value;
+        ul.append(li);
+        inputText.value = "";
+        ul.addEventListener('click', e => {
+            e.target.remove();
+        })
+
     }
     else {
-        alertMes.style.visibility = 'visible';
-        alertMes.innerHTML = `    
-        <div class="alert alert-danger " role="alert">
-        <div class="row justify-content-between align-items-center">
-            <div class="col-12">
-                Değer girmediniz!
-            <button type="button" onclick="hideAlert()" class="btn-close" data-bs-dismiss="alert"
-                aria-label="Close">
-            </button>
-            </div>
-            
-        </div>
-    </div>`;
+        alertMes.style.display = 'inline';
     }
 }
 function hideAlert() {
     let alertMes = document.getElementById("alertMes");
-    alertMes.style.visibility = 'hidden';
+    alertMes.style.display = "none"
 }
